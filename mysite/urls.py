@@ -14,26 +14,24 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.contrib import admin
-from django.urls import path, include
-from django.conf.urls import url
-from . import views, testdb
-from views.account import Login
+from django.urls import path
+from . import views
+from mysite.viewall import register
 
 urlpatterns = [
-
+    path('api/v1/user/register/', register.Register.as_view()),
     path('runoob/', views.runoob),
-    path('user/get/', views.get_project),
-    path('user/post/', views.post_project),
-    # path('api/v1/user/auth/login/create/', views.login, name="login"),
-    path('login/', views.login, name="login"),
-    path('api/v1/user/auth/register/', views.register),
-    path('home/', views.home, name="home"),
-    path('testdb/', testdb.testdb),
-    path('test/', views.test),
-    path('test/post/', views.post),
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.login_view),  # 根目录
-    url(r'^myapp/', include('myapp.urls')),
+    # path('user/get/', views.get_project),
+    # path('user/post/', views.post_project),
+    # # path('api/v1/user/auth/login/create/', views.login, name="login"),
+    # path('login/', views.login, name="login"),
+    # # path('api/v1/user/register/', views.register),
+    #
+    # path('home/', views.home, name="home"),
+    # path('test/', views.test),
+    # path('test/post/', views.post),
+    # url(r'^admin/', admin.site.urls),
+    # url(r'^$', views.login_view),  # 根目录
+    # url(r'^myapp/', include('myapp.urls')),
 
 ]

@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.http import JsonResponse
+from django.views.decorators.http import require_http_methods
 from django.http import HttpResponseRedirect
 from django.shortcuts import render,redirect
 from django.contrib import auth
@@ -80,25 +81,27 @@ def post(request):
     else:
         return HttpResponse('方法错误')
 
-def register(request):
-    if request.method=='GET':
-        #注册页展示
-        views_name="注册页"
-        return render(request,'register.html',{'name':views_name})
-    if request.method=='POST':
-        account=request.POST.get('account')
-        password=request.POST.get('password')
-        models.Users.objects.create(u_name=account,u_password=password)
-        return HttpResponse('注册成功，三秒后跳转到登陆页面')
-        # return HttpResponseRedirect(reverse('acsign:login'))
+# def register(request):
+#     if request.method=='GET':
+#         #注册页展示
+#         views_name="注册页"
+#         return render(request,'register.html',{'name':views_name})
+#     if request.method=='POST':
+#         account=request.POST.get('account',0)
+#         password=request.POST.get('password',0)
+#         user=models.Users(account=account,password=password)
+#         # user=models.Users(account=request.POST.get('account'),password=request.POST.get('password'))
+#         user.save()
+#         return HttpResponse('注册成功，三秒后跳转到登陆页面')
+#         # return HttpResponseRedirect(reverse('acsign:login'))
 
 def login(request):
     if request.method=='GET':
         return render(request,'login.html')
 
     if request.method=='POST':
-        username=request.POST.get('username')
-        password=request.POST.get('password')
+        username=request.POST.get('username',0)
+        password=request.POST.get('password',0)
         user_obj=auth.authenticate(username=username,password=password) # 这里auth模块拿到用户名和密码后，会去auth_user表中查找数据，如果存在返回用户对象，不存在返回None
         if user_obj:
             auth.login(request,user_obj)

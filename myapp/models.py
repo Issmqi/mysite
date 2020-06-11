@@ -30,7 +30,9 @@ class Person(models.Model):
         db_table='person'
 
 
-class Users(models.Model):
+class UserInfo(models.Model):
+
+    objects=models.Manager()
     account=models.CharField(max_length=30)
     password=models.CharField(max_length=30)
     create_time=models.DateField(auto_now=True)
