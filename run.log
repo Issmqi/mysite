@@ -1,0 +1,32 @@
+2020-06-12 17:32:00,780 - request - INFO: 判断参数是否合法
+2020-06-12 17:33:13,062 - request - INFO: 判断参数是否合法
+2020-06-12 17:34:37,715 - request - INFO: username是：<django.forms.fields.CharField object at 0x10a180358>
+2020-06-12 17:34:37,715 - request - INFO: password是：<django.forms.fields.CharField object at 0x10a180278>
+2020-06-12 17:34:40,823 - request - INFO: 判断参数是否合法
+2020-06-12 17:35:23,051 - request - INFO: username是：<django.forms.fields.CharField object at 0x11066b320>
+2020-06-12 17:35:23,051 - request - INFO: password是：<django.forms.fields.CharField object at 0x11066b240>
+2020-06-12 17:37:13,302 - request - INFO: username是：<django.forms.fields.CharField object at 0x10d825358>
+2020-06-12 17:37:13,302 - request - INFO: password是：<django.forms.fields.CharField object at 0x10d825278>
+2020-06-12 17:37:17,638 - request - INFO: username是：None
+2020-06-12 17:37:17,640 - request - INFO: password是：None
+2020-06-12 17:37:42,907 - request - INFO: username是：<django.forms.fields.CharField object at 0x10cca92e8>
+2020-06-12 17:37:42,908 - request - INFO: password是：<django.forms.fields.CharField object at 0x10cca9208>
+2020-06-12 17:37:43,683 - request - INFO: username是：0
+2020-06-12 17:37:43,684 - request - INFO: password是：0
+2020-06-12 17:38:27,523 - request - INFO: username是：<django.forms.fields.CharField object at 0x109aa5358>
+2020-06-12 17:38:27,523 - request - INFO: password是：<django.forms.fields.CharField object at 0x109aa5278>
+2020-06-12 17:55:49,730 - request - INFO: username是：<django.forms.fields.CharField object at 0x102f3c358>
+2020-06-12 17:55:49,731 - request - INFO: password是：<django.forms.fields.CharField object at 0x102f3c278>
+2020-06-12 17:58:29,816 - request - INFO: username是：<django.forms.fields.CharField object at 0x10d831358>
+2020-06-12 17:58:29,817 - request - INFO: password是：<django.forms.fields.CharField object at 0x10d831278>
+2020-06-12 17:58:53,218 - request - INFO: username是：<django.forms.fields.CharField object at 0x10ede1358>
+2020-06-12 17:58:53,218 - request - INFO: password是：<django.forms.fields.CharField object at 0x10ede1278>
+2020-06-12 17:58:58,893 - request - INFO: username的类型是：<class 'NoneType'>
+2020-06-12 17:58:58,893 - request - INFO: username是：None
+2020-06-12 17:58:58,894 - request - INFO: password是：None
+2020-06-12 18:32:24,527 - request - INFO: username是：<django.forms.fields.CharField object at 0x10df595c0>
+2020-06-12 18:32:24,528 - request - INFO: password是：<django.forms.fields.CharField object at 0x10df594e0>
+2020-06-12 18:33:04,599 - request - INFO: username是：<django.forms.fields.CharField object at 0x103773978>
+2020-06-12 18:33:04,600 - request - INFO: password是：<django.forms.fields.CharField object at 0x103773898>
+2020-06-12 18:33:11,712 - request - INFO: username是：<django.forms.fields.CharField object at 0x10a3e75f8>
+2020-06-12 18:33:11,713 - request - INFO: password是：<django.forms.fields.CharField object at 0x10a3e7518>

@@ -8,7 +8,9 @@
 from django import forms
 from django.core.validators import RegexValidator
 from django.core.exceptions import ValidationError
+from mysite.common.util import log
 
+log=log.Log()
 
 # 注册form认证
 class RegForm(forms.Form):
@@ -32,15 +34,17 @@ class RegForm(forms.Form):
             "min_length": "密码不能少于6位"
         }
     )
-
-    r_password = forms.CharField(
-        min_length=6,
-        error_messages={
-            "required": "内容不能为空",
-            "invalid": "格式错误",
-            "min_length": "密码不能少于6位"
-        }
-    )
+    log.info('username是：%s' % username)
+    log.info('password是：%s' % password)
+    #
+    # r_password = forms.CharField(
+    #     min_length=6,
+    #     error_messages={
+    #         "required": "内容不能为空",
+    #         "invalid": "格式错误",
+    #         "min_length": "密码不能少于6位"
+    #     }
+    # )
 
     # email = forms.CharField(
     #     label="邮箱",
@@ -68,20 +72,20 @@ class RegForm(forms.Form):
             raise ValidationError("密码不能为纯数字！")
         return password
 
-    def clean_r_password(self):
-        # 校验密码的合法性，不能为纯数据
-        r_password = self.cleaned_data.get("r_password")
-        if r_password.isdecimal():
-            raise ValidationError("密码不能为纯数字！")
-        return r_password
+    # def clean_r_password(self):
+    #     # 校验密码的合法性，不能为纯数据
+    #     r_password = self.cleaned_data.get("r_password")
+    #     if r_password.isdecimal():
+    #         raise ValidationError("密码不能为纯数字！")
+    #     return r_password
 
     # 定义全局钩子
-    def clean(self):
-        # 校验两次密码输入是否一致
-        if self.cleaned_data.get("password") != self.cleaned_data.get("r_password"):
-            self.add_error("r_password","两次密码输入不一致！")
-        else:
-            return self.cleaned_data
+    # def clean(self):
+    #     # 校验两次密码输入是否一致
+    #     if self.cleaned_data.get("password") != self.cleaned_data.get("r_password"):
+    #         self.add_error("r_password","两次密码输入不一致！")
+    #     else:
+    #         return self.cleaned_data
 
     # 重写init方法，来批量设置标签的样式
     def __init__(self,*args,**kwargs):

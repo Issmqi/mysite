@@ -40,7 +40,7 @@ def get_project(request):
     reportid = request.GET.get("aa")
     print(reportid)
     back = {
-        'code': '200',
+        'status': '200',
         'message': '成功'
     }
     return JsonResponse(back)
