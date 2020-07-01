@@ -30,3 +30,273 @@
 2020-06-12 18:33:04,600 - request - INFO: password是：<django.forms.fields.CharField object at 0x103773898>
 2020-06-12 18:33:11,712 - request - INFO: username是：<django.forms.fields.CharField object at 0x10a3e75f8>
 2020-06-12 18:33:11,713 - request - INFO: password是：<django.forms.fields.CharField object at 0x10a3e7518>
+2020-06-15 14:38:19,732 - request - INFO: username是：<django.forms.fields.CharField object at 0x1049b35f8>
+2020-06-15 14:38:19,733 - request - INFO: password是：<django.forms.fields.CharField object at 0x1049b3518>
+2020-06-24 15:10:29,380 - request - INFO: 用户名是
+2020-06-24 15:10:29,387 - request - INFO: 密码是
+2020-06-24 15:23:14,333 - request - INFO: 用户名是None
+2020-06-24 15:23:14,334 - request - INFO: 密码是None
+2020-06-24 15:55:41,663 - request - INFO: 用户名是None
+2020-06-24 15:55:41,665 - request - INFO: 密码是None
+2020-06-24 15:56:03,768 - request - INFO: 用户名是None
+2020-06-24 15:56:03,768 - request - INFO: 密码是None
+2020-06-24 16:30:20,265 - request - INFO: 用户名是None
+2020-06-24 16:30:20,266 - request - INFO: 密码是None
+2020-06-24 16:34:54,863 - request - INFO: 用户名是None
+2020-06-24 16:34:54,864 - request - INFO: 密码是None
+2020-06-24 16:37:23,908 - request - INFO: 用户名是
+2020-06-24 16:37:23,909 - request - INFO: 密码是
+2020-06-24 16:38:35,494 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test1'], 'password': ['123456']}>):
+2020-06-24 16:38:35,494 - request - INFO: 用户名是
+2020-06-24 16:38:35,495 - request - INFO: 密码是
+2020-06-24 16:39:47,793 - request - INFO: 请求数据是UserSerializer(data={'username': 'test1', 'password': '123456'}):
+2020-06-24 16:39:47,793 - request - INFO: 用户名是
+2020-06-24 16:39:47,794 - request - INFO: 密码是
+2020-06-24 16:41:33,290 - request - INFO: 请求数据是UserSerializer(data={'username': 'test1', 'password': '123456'}):
+2020-06-24 16:41:33,294 - request - INFO: 用户名是
+2020-06-24 16:41:33,296 - request - INFO: 密码是
+2020-06-24 16:43:22,526 - request - INFO: 请求数据是UserSerializer(data={'username': 'test1', 'password': '123456'}):
+2020-06-24 16:43:22,527 - request - INFO: 用户名是None
+2020-06-24 16:43:22,527 - request - INFO: 密码是
+2020-06-28 10:03:04,587 - request - INFO: 请求数据是UserSerializer(data={'username': 'test1', 'password': '123456'}):
+2020-06-28 10:03:04,593 - request - INFO: 用户名是
+2020-06-28 10:03:04,596 - request - INFO: 密码是
+2020-06-28 11:21:43,498 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test1'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    create_time = DateField(label='创建时间', read_only=True)
+2020-06-28 11:21:43,500 - request - INFO: 用户名是test1
+2020-06-28 11:21:43,500 - request - INFO: 密码是123456
+2020-06-28 11:22:19,007 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test1'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    create_time = DateField(label='创建时间', read_only=True)
+2020-06-28 11:22:19,007 - request - INFO: 用户名是test1
+2020-06-28 11:22:19,008 - request - INFO: 密码是123456
+2020-06-28 14:25:57,384 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(label='邮箱', max_length=30, required=False)
+    create_time = DateField(label='创建时间', read_only=True)
+    update_time = DateField(label='更新时间', read_only=True)
+    last_login = DateField(label='最近登录', read_only=True)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    first_name = CharField(label='名字', max_length=30, required=False)
+    last_name = CharField(label='姓氏', max_length=30, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 14:25:57,387 - request - INFO: 用户名是test2
+2020-06-28 14:25:57,388 - request - INFO: 密码是123456
+2020-06-28 16:47:40,684 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    update_time = DateField(required=False)
+    last_login = DateField(required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateField(label='创建时间', read_only=True)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 16:47:40,685 - request - INFO: 用户名是test2
+2020-06-28 16:47:40,686 - request - INFO: 密码是123456
+2020-06-28 16:54:55,330 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    update_time = DateField(required=False)
+    last_login = DateField(required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateField(label='创建时间', read_only=True)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 16:54:55,331 - request - INFO: 用户名是test2
+2020-06-28 16:54:55,331 - request - INFO: 密码是123456
+2020-06-28 16:55:23,442 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    update_time = DateField(required=False)
+    last_login = DateField(required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateField(label='创建时间', read_only=True)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 16:55:23,443 - request - INFO: 用户名是test2
+2020-06-28 16:55:23,443 - request - INFO: 密码是123456
+2020-06-28 16:56:06,206 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    update_time = DateField(required=False)
+    last_login = DateField(required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateField(label='创建时间', read_only=True)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 16:56:06,207 - request - INFO: 用户名是test2
+2020-06-28 16:56:06,207 - request - INFO: 密码是123456
+2020-06-28 16:56:36,829 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    update_time = DateField(required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateField(label='创建时间', read_only=True)
+    last_login = DateField(label='最近登录', required=False)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 16:56:36,830 - request - INFO: 用户名是test2
+2020-06-28 16:56:36,830 - request - INFO: 密码是123456
+2020-06-28 16:57:34,229 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    update_time = DateField(required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateField(label='创建时间', read_only=True)
+    last_login = DateField(label='最近登录', required=False)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 16:57:34,230 - request - INFO: 用户名是test2
+2020-06-28 16:57:34,231 - request - INFO: 密码是123456
+2020-06-28 17:10:16,770 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    update_time = DateField(required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateTimeField(label='创建时间', read_only=True)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 17:10:16,772 - request - INFO: 用户名是test2
+2020-06-28 17:10:16,772 - request - INFO: 密码是123456
+2020-06-28 17:12:31,837 - request - INFO: 请求数据是UserSerializer(data=<QueryDict: {'username': ['test2'], 'password': ['123456']}>):
+    id = IntegerField(read_only=True)
+    username = CharField(max_length=30, required=True)
+    password = CharField(max_length=30, required=True)
+    email = CharField(max_length=30, required=False)
+    first_name = CharField(max_length=30, required=False)
+    last_name = CharField(max_length=30, required=False)
+    create_time = DateTimeField(label='创建时间', read_only=True)
+    update_time = DateTimeField(label='更新时间', read_only=True)
+    is_superuser = CharField(label='是否超级用户', max_length=10, required=False)
+    is_active = CharField(label='是否激活', max_length=30, required=False)
+2020-06-28 17:12:31,837 - request - INFO: 用户名是test2
+2020-06-28 17:12:31,838 - request - INFO: 密码是123456
+2020-07-01 10:24:16,308 - request - INFO: 用户名是admin
+2020-07-01 10:24:16,309 - request - INFO: 密码是admin123
+2020-07-01 15:34:17,086 - request - INFO: 用户名是None
+2020-07-01 15:34:17,086 - request - INFO: 密码是None
+2020-07-01 15:43:51,519 - request - INFO: 用户名是None
+2020-07-01 15:43:51,522 - request - INFO: 密码是None
+2020-07-01 15:47:02,219 - request - INFO: 用户名是admin
+2020-07-01 15:47:02,219 - request - INFO: 密码是admin123
+2020-07-01 15:52:52,410 - request - INFO: 用户名是None
+2020-07-01 15:52:52,413 - request - INFO: 密码是None
+2020-07-01 15:53:45,063 - request - INFO: 用户名是admin
+2020-07-01 15:53:45,063 - request - INFO: 密码是admin123
+2020-07-01 15:56:20,756 - request - INFO: body是b'{"username":"admin","password":"admin123"}'
+2020-07-01 15:56:20,756 - request - INFO: 用户名是None
+2020-07-01 15:56:20,756 - request - INFO: 密码是None
+2020-07-01 15:56:36,688 - request - INFO: body是b'{"username":"admin","password":"admin123"}'
+2020-07-01 15:56:36,689 - request - INFO: 用户名是None
+2020-07-01 15:56:36,691 - request - INFO: 密码是None
+2020-07-01 16:02:42,608 - request - INFO: body是b'username=admin&password=admin123'
+2020-07-01 16:02:42,609 - request - INFO: 用户名是admin
+2020-07-01 16:02:42,609 - request - INFO: 密码是admin123
+2020-07-01 16:04:16,808 - request - INFO: body是b'username=admin&password=admin123'
+2020-07-01 16:04:16,809 - request - INFO: 用户名是admin
+2020-07-01 16:04:16,809 - request - INFO: 密码是admin123
+2020-07-01 16:22:48,957 - request - INFO: 用户名是admin
+2020-07-01 16:22:48,957 - request - INFO: 密码是admin123
+2020-07-01 16:24:14,069 - request - INFO: 用户名是admin
+2020-07-01 16:24:14,070 - request - INFO: 密码是admin123
+2020-07-01 16:25:17,146 - request - INFO: 用户名是admin
+2020-07-01 16:25:17,146 - request - INFO: 密码是admin123
+2020-07-01 16:25:33,972 - request - INFO: 用户名是admin
+2020-07-01 16:25:33,972 - request - INFO: 密码是admin123
+2020-07-01 16:25:57,622 - request - INFO: 用户名是None
+2020-07-01 16:25:57,622 - request - INFO: 密码是None
+2020-07-01 16:33:15,274 - request - INFO: 用户名是None
+2020-07-01 16:33:15,276 - request - INFO: 密码是None
+2020-07-01 16:44:44,942 - request - INFO: 用户名是None
+2020-07-01 16:44:44,944 - request - INFO: 密码是None
+2020-07-01 16:45:05,101 - request - INFO: 用户名是None
+2020-07-01 16:45:05,101 - request - INFO: 密码是None
+2020-07-01 16:45:24,239 - request - INFO: 用户名是None
+2020-07-01 16:45:24,239 - request - INFO: 密码是None
+2020-07-01 17:00:35,938 - request - INFO: 用户名是None
+2020-07-01 17:00:35,939 - request - INFO: 密码是None
+2020-07-01 17:00:50,799 - request - INFO: 用户名是admin
+2020-07-01 17:00:50,799 - request - INFO: 密码是admin123
+2020-07-01 17:16:03,648 - request - INFO: 用户名是None
+2020-07-01 17:16:03,650 - request - INFO: 密码是None
+2020-07-01 17:20:43,568 - request - INFO: 用户名是None
+2020-07-01 17:20:43,569 - request - INFO: 密码是None
+2020-07-01 17:22:20,507 - request - INFO: 用户名是None
+2020-07-01 17:22:20,509 - request - INFO: 密码是None
+2020-07-01 17:23:21,418 - request - INFO: 用户名是None
+2020-07-01 17:23:21,419 - request - INFO: 密码是None
+2020-07-01 17:26:50,097 - request - INFO: 用户名是admin
+2020-07-01 17:26:50,098 - request - INFO: 密码是admin123
+2020-07-01 17:42:49,341 - request - INFO: 用户名是None
+2020-07-01 17:42:49,342 - request - INFO: 密码是None
+2020-07-01 17:51:36,523 - request - INFO: 用户名是None
+2020-07-01 17:51:36,525 - request - INFO: 密码是None
+2020-07-01 18:00:53,956 - request - INFO: 用户名是admin
+2020-07-01 18:00:53,957 - request - INFO: 密码是admin123
+2020-07-01 18:11:14,664 - request - INFO: body是b'username=admin&password=admin123'
+2020-07-01 18:11:14,664 - request - INFO: 用户名是admin
+2020-07-01 18:11:14,665 - request - INFO: 密码是admin123
+2020-07-01 18:21:20,629 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-01 18:21:20,629 - request - INFO: body是b'{"username": "admin", "password": "admin123"}'
+2020-07-01 18:21:20,629 - request - INFO: 用户名是None
+2020-07-01 18:21:20,629 - request - INFO: 密码是None
+2020-07-01 18:23:49,735 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-01 18:23:49,736 - request - INFO: body是b'{"username": "admin", "password": "admin123"}'
+2020-07-01 18:23:49,736 - request - INFO: 用户名是admin
+2020-07-01 18:23:49,736 - request - INFO: 密码是admin123
+2020-07-01 18:25:47,410 - request - INFO: param_dict是{'username': 'admin', 'password:': 'admin123'}
+2020-07-01 18:25:47,411 - request - INFO: body是b'{"username":"admin","password:":"admin123"}'
+2020-07-01 18:26:40,085 - request - INFO: param_dict是{'username': 'admin', 'password:': 'adminqwe'}
+2020-07-01 18:26:40,086 - request - INFO: body是b'{"username":"admin","password:":"adminqwe"}'
+2020-07-01 18:27:20,148 - request - INFO: param_dict是{'username': 'admin', 'password:': 'admin123'}
+2020-07-01 18:27:20,149 - request - INFO: body是b'{"username":"admin","password:":"admin123"}'
+2020-07-01 18:28:35,261 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-01 18:28:35,261 - request - INFO: body是b'{"username": "admin", "password": "admin123"}'
+2020-07-01 18:28:35,262 - request - INFO: 用户名是admin
+2020-07-01 18:28:35,262 - request - INFO: 密码是admin123
+2020-07-01 18:29:46,383 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-01 18:29:46,383 - request - INFO: body是b'{"username": "admin", "password": "admin123"}'
+2020-07-01 18:29:46,383 - request - INFO: 用户名是admin
+2020-07-01 18:29:46,383 - request - INFO: 密码是admin123
+2020-07-01 18:30:05,088 - request - INFO: param_dict是{'username': 'admin', 'password:': 'admin123'}
+2020-07-01 18:30:05,090 - request - INFO: body是b'{"username":"admin","password:":"admin123"}'
+2020-07-01 18:31:39,210 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-01 18:31:39,210 - request - INFO: body是b'{"username": "admin", "password": "admin123"}'
+2020-07-01 18:31:39,210 - request - INFO: 用户名是admin
+2020-07-01 18:31:39,210 - request - INFO: 密码是admin123
+2020-07-01 18:31:48,147 - request - INFO: param_dict是{'username': 'admin', 'password:': 'admin123'}
+2020-07-01 18:31:48,149 - request - INFO: body是b'{"username":"admin","password:":"admin123"}'
+2020-07-01 18:33:40,505 - request - INFO: param_dict是{'username': 'admin', 'password:': 'admin123'}
+2020-07-01 18:33:40,508 - request - INFO: body是b'{"username":"admin","password:":"admin123"}'
+2020-07-01 18:34:39,436 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-01 18:34:39,438 - request - INFO: body是b'{"username":"admin","password":"admin123"}'
+2020-07-01 18:34:39,438 - request - INFO: 用户名是admin
+2020-07-01 18:34:39,438 - request - INFO: 密码是admin123

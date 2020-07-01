@@ -2,12 +2,20 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.http import HttpResponseRedirect
-from django.shortcuts import render,redirect
+from django.shortcuts import render, redirect
 from django.contrib import auth
 from django.contrib.auth.decorators import login_required
 from myapp import models
 import requests
 import json
+from rest_framework import viewsets
+from myapp.models import UserInfo
+from myapp.serializers.user_serializers import UserSerializer
+
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = UserInfo.objects.all()
+    serializer_class = UserSerializer
 
 
 def runoob(request):
@@ -59,6 +67,7 @@ def post_project(request):
     }
     return JsonResponse(back)
 
+
 def post(request):
     if request.method == 'POST':  # 当提交表单时
         dic = {}
@@ -68,7 +77,7 @@ def post(request):
             b = request.POST.get('b', 0)
             # 判断参数中是否含有a和b
             if a and b:
-                res = a+b
+                res = a + b
                 dic['number'] = res
                 dic = json.dumps(dic)
                 # return HttpResponse(dic)
@@ -80,6 +89,7 @@ def post(request):
 
     else:
         return HttpResponse('方法错误')
+
 
 # def register(request):
 #     if request.method=='GET':
@@ -96,20 +106,22 @@ def post(request):
 #         # return HttpResponseRedirect(reverse('acsign:login'))
 
 def login(request):
-    if request.method=='GET':
-        return render(request,'login.html')
+    if request.method == 'GET':
+        return render(request, 'login.html')
 
-    if request.method=='POST':
-        username=request.POST.get('username',0)
-        password=request.POST.get('password',0)
-        user_obj=auth.authenticate(username=username,password=password) # 这里auth模块拿到用户名和密码后，会去auth_user表中查找数据，如果存在返回用户对象，不存在返回None
+    if request.method == 'POST':
+        username = request.POST.get('username', 0)
+        password = request.POST.get('password', 0)
+        user_obj = auth.authenticate(username=username,
+                                     password=password)  # 这里auth模块拿到用户名和密码后，会去auth_user表中查找数据，如果存在返回用户对象，不存在返回None
         if user_obj:
-            auth.login(request,user_obj)
+            auth.login(request, user_obj)
             # 1.auth.login做了session的事情，将用户数据存入数据库，生成sessionid存在cookie中
             # 2.request.user=user_obj，将用户对象存在请求中的user中。
             return HttpResponse('登录成功')
         else:
             return HttpResponse('用户名或密码不存在')
+
 
 # @login_required()
 def home(request):
