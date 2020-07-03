@@ -1,0 +1,457 @@
+2020-07-03 17:09:59,562 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2020-07-03 17:09:59,600 INFO o.a.j.JMeter: Loading user properties from: /Users/xmly/tools/apache-jmeter-5.1.1/bin/user.properties
+2020-07-03 17:09:59,601 INFO o.a.j.JMeter: Loading system properties from: /Users/xmly/tools/apache-jmeter-5.1.1/bin/system.properties
+2020-07-03 17:09:59,625 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2020-07-03 17:09:59,625 INFO o.a.j.JMeter: Version 5.1.1 r1855137
+2020-07-03 17:09:59,625 INFO o.a.j.JMeter: java.version=1.8.0_201
+2020-07-03 17:09:59,625 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2020-07-03 17:09:59,625 INFO o.a.j.JMeter: os.name=Mac OS X
+2020-07-03 17:09:59,626 INFO o.a.j.JMeter: os.arch=x86_64
+2020-07-03 17:09:59,626 INFO o.a.j.JMeter: os.version=10.14.5
+2020-07-03 17:09:59,626 INFO o.a.j.JMeter: file.encoding=UTF-8
+2020-07-03 17:09:59,626 INFO o.a.j.JMeter: java.awt.headless=null
+2020-07-03 17:09:59,626 INFO o.a.j.JMeter: Max memory     =1073741824
+2020-07-03 17:09:59,627 INFO o.a.j.JMeter: Available Processors =4
+2020-07-03 17:09:59,635 INFO o.a.j.JMeter: Default Locale=English (EN)
+2020-07-03 17:09:59,635 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2020-07-03 17:09:59,635 INFO o.a.j.JMeter: JMeterHome=/Users/xmly/tools/apache-jmeter-5.1.1
+2020-07-03 17:09:59,635 INFO o.a.j.JMeter: user.dir  =/Users/xmly/python/mysite/appfront
+2020-07-03 17:09:59,636 INFO o.a.j.JMeter: PWD       =/Users/xmly/python/mysite/appfront
+2020-07-03 17:10:04,643 INFO o.a.j.JMeter: IP: 192.168.105.237 Name: xmlydeMacBook-Pro.local FullName: 192.168.105.237
+2020-07-03 17:10:07,856 INFO o.a.j.g.a.LookAndFeelCommand: Installing Darcula LAF
+2020-07-03 17:10:07,888 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.bulenkov.darcula.DarculaLaf [Darcula]
+2020-07-03 17:10:07,889 INFO o.a.j.JMeter: Setting LAF to: com.bulenkov.darcula.DarculaLaf
+2020-07-03 17:10:08,012 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2020-07-03 17:10:10,849 INFO k.a.j.JMeterPluginsUtils: JMeter-Plugins.org v.1.4.0
+2020-07-03 17:10:11,042 WARN o.a.j.g.u.MenuFactory: Could not instantiate class: kg.apc.jmeter.reporters.LoadosophiaUploaderGui
+java.lang.reflect.InvocationTargetException: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_201]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_201]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_201]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_201]
+	at org.apache.jmeter.gui.util.MenuFactory.getGUIComponent(MenuFactory.java:174) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.util.MenuFactory.initializeMenus(MenuFactory.java:141) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.util.MenuFactory.<clinit>(MenuFactory.java:106) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.control.gui.TestPlanGui.createPopupMenu(TestPlanGui.java:92) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.tree.JMeterTreeNode.createPopupMenu(JMeterTreeNode.java:185) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.EditCommand.doAction(EditCommand.java:46) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:88) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:70) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311) [?:1.8.0_201]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758) [?:1.8.0_201]
+	at java.awt.EventQueue.access$500(EventQueue.java:97) [?:1.8.0_201]
+	at java.awt.EventQueue$3.run(EventQueue.java:709) [?:1.8.0_201]
+	at java.awt.EventQueue$3.run(EventQueue.java:703) [?:1.8.0_201]
+	at java.security.AccessController.doPrivileged(Native Method) [?:1.8.0_201]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74) [?:1.8.0_201]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82) [?:1.8.0_201]
+Caused by: java.lang.NoClassDefFoundError: org/apache/commons/httpclient/methods/multipart/PartSource
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.init(LoadosophiaUploaderGui.java:114) ~[JMeterPlugins-Standard.jar:?]
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.<init>(LoadosophiaUploaderGui.java:28) ~[JMeterPlugins-Standard.jar:?]
+	... 26 more
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.httpclient.methods.multipart.PartSource
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_201]
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.init(LoadosophiaUploaderGui.java:114) ~[JMeterPlugins-Standard.jar:?]
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.<init>(LoadosophiaUploaderGui.java:28) ~[JMeterPlugins-Standard.jar:?]
+	... 26 more
+2020-07-03 17:10:12,261 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-07-03 17:10:12,262 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-07-03 17:10:12,263 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-07-03 17:10:12,263 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2020-07-03 17:10:12,264 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2020-07-03 17:10:12,264 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2020-07-03 17:10:12,823 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2020-07-03 17:10:12,824 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/xmly/tools/apache-jmeter-5.1.1/bin/proxyserver.jks
+2020-07-03 17:10:13,123 INFO o.a.j.s.FileServer: Default base='/Users/xmly/python/mysite/appfront'
+2020-07-03 17:10:13,576 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2020-07-03 17:10:13,576 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2020-07-03 17:10:13,576 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2020-07-03 17:10:13,576 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2020-07-03 17:10:16,980 WARN o.j.r.Plugin: Unable to load class: kg.apc.cmdtools.ReporterTool
+java.lang.NoClassDefFoundError: kg/apc/cmdtools/AbstractCMDTool
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[?:1.8.0_201]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74) ~[?:1.8.0_201]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369) ~[?:1.8.0_201]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363) ~[?:1.8.0_201]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_201]
+	at org.jmeterplugins.repository.Plugin.getJARPath(Plugin.java:202) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.Plugin.detectInstalledPlugin(Plugin.java:108) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.Plugin.detectInstalled(Plugin.java:97) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.PluginManager.load(PluginManager.java:84) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.PluginManagerMenuItem$1.run(PluginManagerMenuItem.java:41) [jmeter-plugins-manager-0.20.jar:?]
+Caused by: java.lang.ClassNotFoundException: kg.apc.cmdtools.AbstractCMDTool
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_201]
+	... 16 more
+2020-07-03 17:10:16,982 WARN o.j.r.Plugin: Unable to load class: kg.apc.cmdtools.FilterResultsTool
+java.lang.NoClassDefFoundError: kg/apc/cmdtools/AbstractCMDTool
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[?:1.8.0_201]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74) ~[?:1.8.0_201]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369) ~[?:1.8.0_201]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363) ~[?:1.8.0_201]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_201]
+	at org.jmeterplugins.repository.Plugin.getJARPath(Plugin.java:202) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.Plugin.detectInstalledPlugin(Plugin.java:108) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.Plugin.detectInstalled(Plugin.java:97) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.PluginManager.load(PluginManager.java:84) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.PluginManagerMenuItem$1.run(PluginManagerMenuItem.java:41) [jmeter-plugins-manager-0.20.jar:?]
+Caused by: java.lang.ClassNotFoundException: kg.apc.cmdtools.AbstractCMDTool
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_201]
+	... 16 more
+2020-07-03 17:10:16,984 WARN o.j.r.Plugin: Unable to load class: kg.apc.cmdtools.TestPlanCheckTool
+java.lang.NoClassDefFoundError: kg/apc/cmdtools/AbstractCMDTool
+	at java.lang.ClassLoader.defineClass1(Native Method) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763) ~[?:1.8.0_201]
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:468) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:74) ~[?:1.8.0_201]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:369) ~[?:1.8.0_201]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:363) ~[?:1.8.0_201]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_201]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:362) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_201]
+	at org.jmeterplugins.repository.Plugin.getJARPath(Plugin.java:202) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.Plugin.detectInstalledPlugin(Plugin.java:108) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.Plugin.detectInstalled(Plugin.java:97) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.PluginManager.load(PluginManager.java:84) [jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.PluginManagerMenuItem$1.run(PluginManagerMenuItem.java:41) [jmeter-plugins-manager-0.20.jar:?]
+Caused by: java.lang.ClassNotFoundException: kg.apc.cmdtools.AbstractCMDTool
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_201]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_201]
+	... 16 more
+2020-07-03 17:10:22,208 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=0.0.0-STOCK, jpgc-sense=0.0.0-STOCK, jpgc-graphs-composite=0.0.0-STOCK, jpgc-csl=0.0.0-STOCK, jpgc-functions=0.0.0-STOCK, jpgc-casutg=0.0.0-STOCK, jpgc-dummy=0.0.0-STOCK, jpgc-ffw=0.0.0-STOCK, jpgc-fifo=0.0.0-STOCK, jpgc-mergeresults=0.0.0-STOCK, jpgc-perfmon=0.0.0-STOCK, jpgc-plugins-manager=0.20, jpgc-synthesis=0.0.0-STOCK, jpgc-tst=0.0.0-STOCK, jpgc-wsc=0.0.0-STOCK, jmeter-core=5.1.1, jmeter-ftp=5.1.1, jmeter-http=5.1.1, jmeter-jdbc=5.1.1, jmeter-jms=5.1.1, jmeter-junit=5.1.1, jmeter-java=5.1.1, jmeter-ldap=5.1.1, jmeter-mail=5.1.1, jmeter-mongodb=5.1.1, jmeter-native=5.1.1, jmeter-tcp=5.1.1, jmeter-components=5.1.1, jpgc-standard=2.0]
+2020-07-03 17:10:22,212 INFO o.j.r.PluginManagerMenuItem: Plugins Manager has upgrades: [jpgc-graphs-basic, jpgc-sense, jpgc-graphs-composite, jpgc-csl, jpgc-functions, jpgc-casutg, jpgc-dummy, jpgc-ffw, jpgc-fifo, jpgc-mergeresults, jpgc-perfmon, jpgc-plugins-manager, jpgc-synthesis, jpgc-tst, jpgc-wsc]
+2020-07-03 17:10:59,232 INFO o.a.j.g.a.Load: Loading file: /Users/xmly/work/performancetesting/oms原单导入.jmx
+2020-07-03 17:10:59,232 INFO o.a.j.s.FileServer: Set new base='/Users/xmly/work/performancetesting'
+2020-07-03 17:10:59,456 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2020-07-03 17:10:59,461 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2020-07-03 17:10:59,464 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2020-07-03 17:10:59,469 INFO o.a.j.s.SaveService: Loading file: /Users/xmly/work/performancetesting/oms原单导入.jmx
+2020-07-03 17:10:59,471 WARN o.j.r.p.TestPlanAnalyzer: Cannot parse file: /Users/xmly/work/performancetesting/oms原单导入.jmx
+java.net.MalformedURLException: no protocol: /Users/xmly/work/performancetesting/oms原单导入.jmx
+	at java.net.URL.<init>(URL.java:593) ~[?:1.8.0_201]
+	at java.net.URL.<init>(URL.java:490) ~[?:1.8.0_201]
+	at java.net.URL.<init>(URL.java:439) ~[?:1.8.0_201]
+	at org.apache.xerces.impl.XMLEntityManager.setupCurrentEntity(Unknown Source) ~[xercesImpl-2.12.0.jar:2.12.0]
+	at org.apache.xerces.impl.XMLVersionDetector.determineDocVersion(Unknown Source) ~[xercesImpl-2.12.0.jar:2.12.0]
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source) ~[xercesImpl-2.12.0.jar:?]
+	at org.apache.xerces.parsers.XML11Configuration.parse(Unknown Source) ~[xercesImpl-2.12.0.jar:?]
+	at org.apache.xerces.parsers.XMLParser.parse(Unknown Source) ~[xercesImpl-2.12.0.jar:?]
+	at org.apache.xerces.parsers.DOMParser.parse(Unknown Source) ~[xercesImpl-2.12.0.jar:?]
+	at org.apache.xerces.jaxp.DocumentBuilderImpl.parse(Unknown Source) ~[xercesImpl-2.12.0.jar:?]
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:177) ~[?:1.8.0_201]
+	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.getNodeListWithClassNames(TestPlanAnalyzer.java:58) ~[jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.plugins.TestPlanAnalyzer.analyze(TestPlanAnalyzer.java:32) ~[jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.plugins.PluginSuggester.analyzeTestPlan(PluginSuggester.java:51) ~[jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.plugins.PluginSuggester.findPluginsToInstall(PluginSuggester.java:44) ~[jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.plugins.PluginSuggester.checkAndSuggest(PluginSuggester.java:28) ~[jmeter-plugins-manager-0.20.jar:?]
+	at org.jmeterplugins.repository.logging.LoggerAppender.append(LoggerAppender.java:33) ~[jmeter-plugins-manager-0.20.jar:?]
+	at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:156) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:129) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:120) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:84) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:464) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:448) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:431) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:406) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:63) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.core.Logger.logMessage(Logger.java:146) ~[log4j-core-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2170) ~[log4j-api-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2125) ~[log4j-api-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2108) ~[log4j-api-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logMessage(AbstractLogger.java:2019) ~[log4j-api-2.11.1.jar:2.11.1]
+	at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1890) ~[log4j-api-2.11.1.jar:2.11.1]
+	at org.apache.logging.slf4j.Log4jLogger.info(Log4jLogger.java:184) ~[log4j-slf4j-impl-2.11.1.jar:2.11.1]
+	at org.apache.jmeter.save.SaveService.loadTree(SaveService.java:428) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:130) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.Load.loadProjectFile(Load.java:102) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.Load.doActionAfterCheck(Load.java:89) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.AbstractActionWithNoRunningTest.doAction(AbstractActionWithNoRunningTest.java:45) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:88) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:70) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311) [?:1.8.0_201]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758) [?:1.8.0_201]
+	at java.awt.EventQueue.access$500(EventQueue.java:97) [?:1.8.0_201]
+	at java.awt.EventQueue$3.run(EventQueue.java:709) [?:1.8.0_201]
+	at java.awt.EventQueue$3.run(EventQueue.java:703) [?:1.8.0_201]
+	at java.security.AccessController.doPrivileged(Native Method) [?:1.8.0_201]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74) [?:1.8.0_201]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93) [?:1.8.0_201]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82) [?:1.8.0_201]
+2020-07-03 17:10:59,786 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2020-07-03 17:10:59,786 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2020-07-03 17:11:01,585 INFO o.a.j.s.FileServer: Set new base='/Users/xmly/work/performancetesting'
+2020-07-03 17:11:59,081 INFO o.a.j.u.JMeterUtils: Setting Locale to zh_CN
+2020-07-03 17:12:36,767 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:12:36,771 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:12:36,771 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:12:36,782 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:12:36,960 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:12:36,960 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:12:36,960 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:12:36,960 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:12:36,976 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:12:36,977 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:12:36,980 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:12:36,990 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:12:37,007 INFO o.a.j.u.BeanShellTestElement: 65b9a67baf29f46d4c64ce570ab94f35
+2020-07-03 17:12:37,016 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = xmlydeMacBook-Pro.local
+2020-07-03 17:12:37,023 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2020-07-03 17:12:37,229 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:12:37,229 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:12:37,232 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:12:37,232 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:22:49,913 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:22:49,917 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:22:49,926 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:22:50,221 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:22:50,221 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:22:50,222 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:22:50,222 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:22:50,229 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:22:50,230 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:22:50,230 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:22:50,231 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:22:50,235 INFO o.a.j.u.BeanShellTestElement: 0d7775c7d982255e0aa2ea4187d224cc
+2020-07-03 17:22:50,368 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:22:50,369 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:22:50,369 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:22:50,369 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:22:58,951 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:22:58,951 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:22:58,963 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:22:59,140 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:22:59,141 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:22:59,142 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:22:59,142 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:22:59,161 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:22:59,163 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:22:59,166 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:22:59,167 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:22:59,177 INFO o.a.j.u.BeanShellTestElement: d46c4a51ca9c5891e3cc00048814db14
+2020-07-03 17:22:59,275 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:22:59,275 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:22:59,275 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:22:59,276 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:25:32,658 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:25:32,658 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:25:32,660 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:25:32,859 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:25:32,859 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:25:32,859 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:25:32,860 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:25:32,889 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:25:32,889 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:25:32,889 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:25:32,890 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:25:32,902 INFO o.a.j.u.BeanShellTestElement: 5ef6de30ceb5ebb433addda4a600302e
+2020-07-03 17:25:33,041 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:25:33,041 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:25:33,041 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:25:33,041 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:30:52,433 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:30:52,435 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:30:52,438 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:30:52,657 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:30:52,657 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:30:52,657 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:30:52,657 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:30:52,667 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:30:52,667 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:30:52,667 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:30:52,667 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:30:52,704 INFO o.a.j.u.BeanShellTestElement: 20153455face6b240f29abda54e8b4e3
+2020-07-03 17:30:52,862 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:30:52,862 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:30:52,862 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:30:52,862 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:35:44,073 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:35:44,074 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:35:44,077 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:35:44,296 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:35:44,296 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:35:44,296 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:35:44,296 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:35:44,305 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:35:44,305 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:35:44,307 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:35:44,308 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:35:44,317 INFO o.a.j.u.BeanShellTestElement: 5cd42661c73cc61c1cc651edf60d4cdb
+2020-07-03 17:35:44,450 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:35:44,451 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:35:44,451 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:35:44,451 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:40:51,207 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:40:51,208 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:40:51,212 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:40:51,427 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:40:51,427 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:40:51,428 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:40:51,428 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:40:51,456 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:40:51,457 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:40:51,457 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:40:51,462 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:40:51,478 INFO o.a.j.u.BeanShellTestElement: 16766050aae733714a9157bfa7f3886f
+2020-07-03 17:40:51,837 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:40:51,837 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:40:51,838 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:40:51,838 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:41:21,716 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:41:21,717 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:41:21,719 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:41:21,921 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:41:21,921 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:41:21,921 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:41:21,922 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:41:21,959 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:41:21,960 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:41:21,960 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:41:21,962 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:41:21,973 INFO o.a.j.u.BeanShellTestElement: b359f2f22c0e26e88886754538350e97
+2020-07-03 17:41:22,930 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:41:22,930 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:41:22,931 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:41:22,931 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:47:04,841 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:47:04,844 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:47:04,846 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:47:05,065 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:47:05,067 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:47:05,067 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:47:05,068 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:47:05,089 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:47:05,090 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:47:05,094 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:47:05,097 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:47:05,146 INFO o.a.j.u.BeanShellTestElement: fe8e75ad4685d9ca47d3ff0511cf1978
+2020-07-03 17:47:05,335 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:47:05,335 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:47:05,336 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:47:05,336 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:47:35,284 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:47:35,284 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:47:35,286 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:47:35,472 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:47:35,472 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:47:35,472 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:47:35,473 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:47:35,490 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:47:35,491 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:47:35,491 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:47:35,492 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:47:35,516 INFO o.a.j.u.BeanShellTestElement: 344b972b61e209923e180a3e731eb1b0
+2020-07-03 17:47:35,847 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:47:35,848 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:47:35,848 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:47:35,849 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:48:17,135 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:48:17,136 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:48:17,140 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:48:17,375 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-uat-rps模式
+2020-07-03 17:48:17,377 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-uat-rps模式.
+2020-07-03 17:48:17,377 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:48:17,379 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:48:17,419 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:48:17,419 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:48:17,419 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:48:17,422 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:48:17,431 INFO o.a.j.u.BeanShellTestElement: 83aab22986656334a6fb02b647944437
+2020-07-03 17:48:17,822 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:48:17,822 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-uat-rps模式 1-1
+2020-07-03 17:48:17,823 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:48:17,823 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:53:45,765 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:53:45,766 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:53:45,767 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:53:45,969 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-测试环境-rps模式
+2020-07-03 17:53:45,970 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-测试环境-rps模式.
+2020-07-03 17:53:45,970 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:53:45,970 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:53:45,983 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:53:45,983 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:53:45,983 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 17:53:45,987 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:53:46,004 INFO o.a.j.u.BeanShellTestElement: afe974ff0214b1ecec0640f2a8a32068
+2020-07-03 17:53:46,341 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 17:53:46,341 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 17:53:46,341 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:53:46,342 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 17:56:19,366 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 17:56:19,367 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 17:56:19,370 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 17:56:19,563 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-测试环境-rps模式
+2020-07-03 17:56:19,564 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-测试环境-rps模式.
+2020-07-03 17:56:19,564 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 17:56:19,565 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 17:56:19,587 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 17:56:19,588 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 17:56:19,595 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 17:56:19,597 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 17:56:19,606 INFO o.a.j.u.BeanShellTestElement: 31f89856dff5b594bfdc63722672143e
+2020-07-03 17:56:19,961 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 17:56:19,961 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 17:56:19,962 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 17:56:19,962 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 18:09:47,654 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 18:09:47,663 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 18:09:47,671 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 18:09:48,084 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-测试环境-rps模式
+2020-07-03 18:09:48,085 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-测试环境-rps模式.
+2020-07-03 18:09:48,085 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 18:09:48,085 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 18:09:48,098 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 18:09:48,098 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 18:09:48,098 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 18:09:48,099 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 18:09:48,112 INFO o.a.j.u.BeanShellTestElement: 48894a2ec7402ccb69c2c65f15e8a291
+2020-07-03 18:09:48,714 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 18:09:48,714 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 18:09:48,714 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 18:09:48,715 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)
+2020-07-03 18:32:15,971 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2020-07-03 18:32:15,983 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2020-07-03 18:32:15,988 INFO o.a.j.g.u.JMeterMenuBar: setRunning(true, *local*)
+2020-07-03 18:32:16,446 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : oms原单导入-测试环境-rps模式
+2020-07-03 18:32:16,447 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group oms原单导入-测试环境-rps模式.
+2020-07-03 18:32:16,447 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2020-07-03 18:32:16,447 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=0 delayedStart=false
+2020-07-03 18:32:16,464 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2020-07-03 18:32:16,465 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2020-07-03 18:32:16,466 INFO o.a.j.t.JMeterThread: Thread started: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 18:32:16,468 WARN o.a.j.c.RandomVariableConfig: maximum(9999999999) - minimum(1111111111) must be <= 2147483647
+2020-07-03 18:32:16,488 INFO o.a.j.u.BeanShellTestElement: 9ee716a0b7521c4761d9405670a3abe7
+2020-07-03 18:32:16,969 INFO o.a.j.t.JMeterThread: Thread is done: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 18:32:16,969 INFO o.a.j.t.JMeterThread: Thread finished: oms原单导入-测试环境-rps模式 1-1
+2020-07-03 18:32:16,971 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2020-07-03 18:32:16,971 INFO o.a.j.g.u.JMeterMenuBar: setRunning(false, *local*)

@@ -78,10 +78,7 @@
 								// 'Authorization': 'Bearer ' + localStorage.access_token,
 							},
 							body:JSON.stringify(jsonData)
-    						// body: JSON.stringify({
-							// 	username: this.loginForm.username,
-							// 	password: this.loginForm.password,
-							// })
+    						
 						}).then(function(res){
 							res.json().then(function(obj){
 								if(obj.errcode == '200'){
@@ -91,7 +88,7 @@
 							})
 						})
 						
-						// const res = await login({user_name: this.loginForm.username, password: this.loginForm.password})
+						// const res = await login({'user_name': this.loginForm.username, 'password': this.loginForm.password})
 
 						// if (res.status == 1) {
 						// 	this.$message({

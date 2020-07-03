@@ -3,7 +3,11 @@ import { baseUrl } from './env'
 export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 	type = type.toUpperCase();
 	url = baseUrl + url;
-
+	console.log('url:',url)
+	console.log('data:',data)
+	console.log('type:',type)
+	console.log('method:',method)
+	// console.log('debug:',window.fetch)
 	if (type == 'GET') {
 		let dataStr = ''; //数据拼接字符串
 		Object.keys(data).forEach(key => {
@@ -17,8 +21,9 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 	}
 
 	if (window.fetch && method == 'fetch') {
+		console.log('debug','程序执行到post方法')
 		let requestConfig = {
-			credentials: 'include',
+			// credentials: 'include',
 			method: type,
 			headers: {
 				'Accept': 'application/json',
@@ -29,6 +34,7 @@ export default async(url = '', data = {}, type = 'GET', method = 'fetch') => {
 		}
 
 		if (type == 'POST') {
+			// requestConfig对象上定义新属性
 			Object.defineProperty(requestConfig, 'body', {
 				value: JSON.stringify(data)
 			})
