@@ -1,0 +1,58 @@
+{
+  "id": "1930995",
+  "name": "elementicon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15014027",
+      "name": "activity",
+      "font_class": "activity",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "15014028",
+      "name": "article",
+      "font_class": "article",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "15014029",
+      "name": "case",
+      "font_class": "case",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "15014030",
+      "name": "about",
+      "font_class": "about",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "15014031",
+      "name": "feedback",
+      "font_class": "feedback",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "15014044",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "15014053",
+      "name": "appointment",
+      "font_class": "appointment",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}

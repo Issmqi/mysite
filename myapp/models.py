@@ -51,79 +51,79 @@ class UserInfo(models.Model):
         verbose_name = '用户信息表'  # 在admin站点显示名称
         verbose_name_plural = verbose_name
 
-
-class Project(models.Model):
-    '''项目信息'''
-    objects = models.Manager()
-    project_id = models.AutoField(primary_key=True, verbose_name='项目id')
-    project_name = models.CharField(max_length=50, verbose_name='项目名称')
-    time = models.DateTimeField(auto_now=True, max_length=50, verbose_name='操作时间')
-    type = models.CharField(max_length=50, verbose_name='操作类型')
-    operationObject = models.CharField(max_length=50, verbose_name='操作对象')
-    user = models.ForeignKey(UserInfo, related_name='username', blank=True, null=True,
-                             on_delete=models.SET_NULL, verbose_name='操作人')
-    description = models.CharField(max_length=1024, blank=True, null=True, verbose_name='描述')
-
-    def __unicode__(self):
-        return self.project_id
-
-    def __str__(self):
-        return self.project_id
-
-    class Meta:
-        data_table = 'project'
-        verbose_name = '项目'
-        verbose_name_plural = verbose_name
-
-
-class ApiGroup(models.Model):
-    '''
-    接口分组
-    '''
-
-    objects = models.Manager()
-    group_id = models.AutoField(primary_key=True, verbose_name='接口分组id')
-    project = models.ForeignKey(Project, related_name='project_id', on_delete=models.CASCADE, verbose_name='所属项目')
-    group_name = models.CharField(max_length=50, verbose_name='接口分组名称')
-
-    def __unicode__(self):
-        return self.group_id
-
-    def __str__(self):
-        return self.group_id
-
-    class Meta:
-        data_table = 'group'
-        verbose_name = '接口分组'
-        verbose_name_plural = verbose_name
-
-
-class ApiInfo(models.Model):
-    '''接口信息'''
-    objects = models.Manager()
-    api_id = models.AutoField(primary_key=True, verbose_name='接口id')
-    project = models.ForeignKey(Project, related_name="project_id", on_delete=models.CASCADE, verbose_name='所属项目')
-    api_group = models.ForeignKey(ApiGroup, related_name="group_id", blank=True, null=True, on_delete=models.SET_NULL,
-                                  verbose_name='所属分组')
-    api_name=models.CharField(max_length=50,verbose_name='接口名称')
-    param_type=models.CharField(max_length=50,verbose_name='')
-
-
-class AutoTestCase(models.Model):
-    '''用例信息'''
-    objects=models.Manager()
-    case_id=models.AutoField(primary_key=True,verbose_name='用例编号')
-    case_name=models.CharField(max_length=50,verbose_name='用例名称')
-    header=models.CharField(max_length=120,verbose_name='请求头')
-    path=models.CharField(max_length=1024,verbose_name="请求路径")
-    request_type=models.CharField(max_length=120,verbose_name='请求类型')
-    param_type=models.CharField(max_length=50,verbose_name='请求擦数类型')
-    param=models.TextField(verbose_name='请求参数')
-    expect_code=models.CharField(max_length=10,verbose_name='预期状态码')
-    actul_code=models.CharField(max_length=10,verbose_name='实际状态码')
-    expect_result=models.TextField(verbose_name='预期结果')
-    actul_result=models.TextField(verbose_name='实际结果')
-    is_depend=models.CharField(verbose_name='是否依赖case')
-    depend_case_id=models.CharField(verbose_name='依赖的caseid')
-
-
+#
+# class Project(models.Model):
+#     '''项目信息'''
+#     objects = models.Manager()
+#     project_id = models.AutoField(primary_key=True, verbose_name='项目id')
+#     project_name = models.CharField(max_length=50, verbose_name='项目名称')
+#     time = models.DateTimeField(auto_now=True, max_length=50, verbose_name='操作时间')
+#     type = models.CharField(max_length=50, verbose_name='操作类型')
+#     operationObject = models.CharField(max_length=50, verbose_name='操作对象')
+#     user = models.ForeignKey(UserInfo, related_name='username', blank=True, null=True,
+#                              on_delete=models.SET_NULL, verbose_name='操作人')
+#     description = models.CharField(max_length=1024, blank=True, null=True, verbose_name='描述')
+#
+#     def __unicode__(self):
+#         return self.project_id
+#
+#     def __str__(self):
+#         return self.project_id
+#
+#     class Meta:
+#         data_table = 'project'
+#         verbose_name = '项目'
+#         verbose_name_plural = verbose_name
+#
+#
+# class ApiGroup(models.Model):
+#     '''
+#     接口分组
+#     '''
+#
+#     objects = models.Manager()
+#     group_id = models.AutoField(primary_key=True, verbose_name='接口分组id')
+#     project = models.ForeignKey(Project, related_name='project_id', on_delete=models.CASCADE, verbose_name='所属项目')
+#     group_name = models.CharField(max_length=50, verbose_name='接口分组名称')
+#
+#     def __unicode__(self):
+#         return self.group_id
+#
+#     def __str__(self):
+#         return self.group_id
+#
+#     class Meta:
+#         data_table = 'group'
+#         verbose_name = '接口分组'
+#         verbose_name_plural = verbose_name
+#
+#
+# class ApiInfo(models.Model):
+#     '''接口信息'''
+#     objects = models.Manager()
+#     api_id = models.AutoField(primary_key=True, verbose_name='接口id')
+#     project = models.ForeignKey(Project, related_name="project_id", on_delete=models.CASCADE, verbose_name='所属项目')
+#     api_group = models.ForeignKey(ApiGroup, related_name="group_id", blank=True, null=True, on_delete=models.SET_NULL,
+#                                   verbose_name='所属分组')
+#     api_name=models.CharField(max_length=50,verbose_name='接口名称')
+#     param_type=models.CharField(max_length=50,verbose_name='')
+#
+#
+# class AutoTestCase(models.Model):
+#     '''用例信息'''
+#     objects=models.Manager()
+#     case_id=models.AutoField(primary_key=True,verbose_name='用例编号')
+#     case_name=models.CharField(max_length=50,verbose_name='用例名称')
+#     header=models.CharField(max_length=120,verbose_name='请求头')
+#     path=models.CharField(max_length=1024,verbose_name="请求路径")
+#     request_type=models.CharField(max_length=120,verbose_name='请求类型')
+#     param_type=models.CharField(max_length=50,verbose_name='请求擦数类型')
+#     param=models.TextField(verbose_name='请求参数')
+#     expect_code=models.CharField(max_length=10,verbose_name='预期状态码')
+#     actul_code=models.CharField(max_length=10,verbose_name='实际状态码')
+#     expect_result=models.TextField(verbose_name='预期结果')
+#     actul_result=models.TextField(verbose_name='实际结果')
+#     is_depend=models.CharField(verbose_name='是否依赖case')
+#     depend_case_id=models.CharField(verbose_name='依赖的caseid')
+#
+#

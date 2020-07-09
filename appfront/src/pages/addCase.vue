@@ -226,393 +226,390 @@
     </section>
 </template>
 <script>
-    import { addApiDetail, getApiGroupList } from "../../../api/api";
+import { addApiDetail, getApiGroupList } from '../../../api/api'
 
-    export default {
-        data() {
-            return {
-                request: [{value: 'GET', label: 'GET'},
-                    {value: 'POST', label: 'POST'},
-                    {value: 'PUT', label: 'PUT'},
-                    {value: 'DELETE', label: 'DELETE'}],
-                Http: [{value: 'HTTP', label: 'HTTP'},
-                    {value: 'HTTPS', label: 'HTTPS'}],
-                paramTyep: [{value: 'Int', label: 'Int'},
-                    {value: 'String', label: 'String'}],
-                checkHeadList: [],
-                checkParameterList: [],
-                ParameterTyep: true,
-                group: [],
-                radio: "form-data",
-                secondGroup: [],
-                status: [{value: true, label: '启用'},
-                    {value: false, label: '禁用'}],
-                header: [{value: 'Accept', label: 'Accept'},
-                    {value: 'Accept-Charset', label: 'Accept-Charset'},
-                    {value: 'Accept-Encoding', label: 'Accept-Encoding'},
-                    {value: 'Accept-Language', label: 'Accept-Language'},
-                    {value: 'Accept-Ranges', label: 'Accept-Ranges'},
-                    {value: 'Authorization', label: 'Authorization'},
-                    {value: 'Cache-Control', label: 'Cache-Control'},
-                    {value: 'Connection', label: 'Connection'},
-                    {value: 'Cookie', label: 'Cookie'},
-                    {value: 'Content-Length', label: 'Content-Length'},
-                    {value: 'Content-Type', label: 'Content-Type'},
-                    {value: 'Content-MD5', label: 'Content-MD5'},
-                    {value: 'Date', label: 'Date'},
-                    {value: 'Expect', label: 'Expect'},
-                    {value: 'From', label: 'From'},
-                    {value: 'Host', label: 'Host'},
-                    {value: 'If-Match', label: 'If-Match'},
-                    {value: 'If-Modified-Since', label: 'If-Modified-Since'},
-                    {value: 'If-None-Match', label: 'If-None-Match'},
-                    {value: 'If-Range', label: 'If-Range'},
-                    {value: 'If-Unmodified-Since', label: 'If-Unmodified-Since'},
-                    {value: 'Max-Forwards', label: 'Max-Forwards'},
-                    {value: 'Origin', label: 'Origin'},
-                    {value: 'Pragma', label: 'Pragma'},
-                    {value: 'Proxy-Authorization', label: 'Proxy-Authorization'},
-                    {value: 'Range', label: 'Range'},
-                    {value: 'Referer', label: 'Referer'},
-                    {value: 'TE', label: 'TE'},
-                    {value: 'Upgrade', label: 'Upgrade'},
-                    {value: 'User-Agent', label: 'User-Agent'},
-                    {value: 'Via', label: 'Via'},
-                    {value: 'Warning', label: 'Warning'}],
-                header4: "",
-                addParameterFormVisible: false,
-                addResponseFormVisible: false,
-                required4:[{value: true, label: '是'},
-                    {value: false, label: '否'}],
-                httpCode:[{value: '', label: ''},
-                    {value: '200', label: '200'},
-                    {value: '404', label: '404'},
-                    {value: '400', label: '400'},
-                    {value: '500', label: '500'},
-                    {value: '502', label: '502'},
-                    {value: '302', label: '302'}],
-                radioType: "",
-                result: true,
-                activeNames: ['1', '2', '3', '4'],
-                id: "",
-                parameterRaw: "",
-                request3: true,
-                form: {
-                    apiGroupLevelFirst_id: '',
-                    name: '',
-                    status: true,
-                    requestType: 'POST',
-                    httpType: 'HTTP',
-                    apiAddress: '',
-                    headDict: [{name: "", value: ""},
-                        {name: "", value: ""}],
-                    requestList: [{name: "", value: "", _type:"String", required: true, restrict: "", description: ""},
-                        {name: "", value: "", _type:"String", required: true, restrict: "", description: ""}],
-                    requestParameterType: "",
-                    responseList: [{name: "", value: "", _type:"String", required:true, description: ""},
-                        {name: "", value: "", _type:"String", required:true, description: ""}],
-                    mockCode: '',
-                    data: '',
-                },
-                FormRules: {
-                    name : [{ required: true, message: '请输入名称', trigger: 'blur' },
-                        { max: 50, message: '不能超过50个字', trigger: 'blur' }],
-                    apiAddress : [{ required: true, message: '请输入地址', trigger: 'blur' }],
-                    required : [{ type: 'boolean', required: true, message: '请选择状态', trigger: 'blur' }],
-                    apiGroupLevelFirst_id : [{ type: 'number', required: true, message: '请选择分组', trigger: 'blur'}],
-                },
-                editForm: {
-                    name: "",
-                    value: "",
-                    required: "",
-                    restrict: "",
-                    description: "",
-                },
-                // editLoading: false
-            }
-        },
-        methods: {
-            checkRequest(){
-                let request = this.form.requestType;
-                if (request==="GET" || request==="DELETE"){
-                    this.request3=false
-                } else {
-                    this.request3=true
-                }
-            },
-            isJsonString(str) {
-                try {
-                    if (typeof JSON.parse(str) === "object") {
-                        return true;
-                    }
-                } catch(e) {
-                }
-                return false;
-            },
-            addApiInfo:function(){
-                if (this.form.data&&this.form.mockCode) {
-                    if (!this.isJsonString(this.form.data)) {
-                        this.$message({
-                            message: 'mock格式错误',
-                            center: true,
-                            type: 'error'
-                        })
-                    } else {
-                        this.addApi()
-                    }
-                } else if(this.form.data||this.form.mockCode){
-                    this.$message({
-                        message: 'HTTP状态或mock为空',
-                        center: true,
-                        type: 'warning'
-                    })
-                } else {
-                    this.addApi()
-                }
-            },
-            addApi: function () {
-                this.$refs.form.validate((valid) => {
-                    if (valid) {
-                        let self = this;
-                        console.log(this.form.requestList);
-                        this.$confirm('确认提交吗？', '提示', {}).then(() => {
-                            self.form.parameterType = self.radio;
-                            let _type = self.form.parameterType;
-                            let _parameter = {};
-                            if ( _type === 'form-data') {
-                                if ( self.radioType === true) {
-                                    _type = 'raw';
-                                    self.form.requestList.forEach((item) => {
-                                        if (item.name) {
-                                            _parameter[item.name] = item.value
-                                        }
-                                    });
-                                    _parameter = JSON.stringify(_parameter)
-                                } else {
-                                    _parameter = self.form.requestList;
-                                }
-                            } else {
-                                _parameter = self.parameterRaw
-                            }
-                            console.log(_parameter)
-                            let params = {
-                                project_id: Number(self.$route.params.project_id),
-                                apiGroupLevelFirst_id: Number(self.form.apiGroupLevelFirst_id),
-                                name: self.form.name,
-                                httpType: self.form.httpType,
-                                requestType: self.form.requestType,
-                                apiAddress: self.form.apiAddress,
-                                status: self.form.status,
-                                headDict: self.form.headDict,
-                                requestParameterType: _type,
-                                requestList: _parameter,
-                                responseList: self.form.responseList,
-                                mockCode: self.form.mockCode,
-                                data: self.form.data,
-                                description: "",
-                            };
-                            let headers = {
-                                "Content-Type": "application/json",
-                                Authorization: 'Token ' + JSON.parse(sessionStorage.getItem('token'))
-
-                            };
-                            if (self.parameterRaw&&_type==="raw"){
-                                if (!self.isJsonString(self.parameterRaw)) {
-                                    self.$message({
-                                        message: '源数据格式错误',
-                                        center: true,
-                                        type: 'error'
-                                    })
-                                } else {
-                                    addApiDetail(headers, params).then(_data => {
-                                        let {msg, code, data} = _data;
-                                        if (code === '999999') {
-                                            self.$router.push({name: '分组接口列表',
-                                                params: {
-                                                    project_id: self.$route.params.project_id,
-                                                    firstGroup: self.form.apiGroupLevelFirst_id
-                                                }
-                                            });
-                                            self.$message({
-                                                message: '保存成功',
-                                                center: true,
-                                                type: 'success'
-                                            })
-                                        }
-                                        else {
-                                            self.$message.error({
-                                                message: msg,
-                                                center: true,
-                                            })
-                                        }
-                                    })
-                                }
-                            } else {
-                                addApiDetail(headers, params).then(_data => {
-                                    let {msg, code, data} = _data;
-                                    if (code === '999999') {
-                                        self.$router.push({name: '分组接口列表',
-                                            params: {
-                                                project_id: self.$route.params.project_id,
-                                                firstGroup: self.form.apiGroupLevelFirst_id
-                                            }
-                                        });
-                                        self.$message({
-                                            message: '保存成功',
-                                            center: true,
-                                            type: 'success'
-                                        })
-                                    }
-                                    else {
-                                        self.$message.error({
-                                            message: msg,
-                                            center: true,
-                                        })
-                                    }
-                                })
-                            }
-                        })
-                    }
-                })
-            },
-            editParameterSubmit: function () {
-                this.$refs.editForm.validate((valid) => {
-                    if (valid) {
-                        this.form.requestList[this.id] = this.editForm;
-                        this.addParameterFormVisible = false
-                    }
-                })
-            },
-            handleParameterEdit: function (index, row) {
-                this.addParameterFormVisible = true;
-                this.id = index;
-                this.editForm = Object.assign({}, row);
-            },
-            editResponseSubmit: function () {
-                this.$refs.editForm.validate((valid) => {
-                    if (valid) {
-                        this.form.responseList[this.id] = this.editForm;
-                        this.addResponseFormVisible = false
-                    }
-                })
-            },
-            handleResponseEdit: function (index, row) {
-                this.addResponseFormVisible = true;
-                this.id = index;
-                this.editForm = Object.assign({}, row);
-            },
-            // 获取api分组
-            getApiGroup() {
-                let self = this;
-                let params = {
-                    project_id: this.$route.params.project_id
-                };
-                let headers = {
-                    "Content-Type": "application/json",
-                    Authorization: 'Token '+JSON.parse(sessionStorage.getItem('token'))
-                };
-                getApiGroupList(headers, params).then(_data => {
-                    let {msg, code, data} = _data;
-                    if (code === '999999') {
-                        self.group = data;
-                        self.form.apiGroupLevelFirst_id = self.group[0].id
-                    }
-                    else {
-                        self.$message.error({
-                            message: msg,
-                            center: true,
-                        })
-                    }
-                })
-            },
-            addHead() {
-                let headers = {name: "", value: ""};
-                this.form.headDict.push(headers)
-            },
-            delHead(index) {
-                this.form.headDict.splice(index, 1);
-                if (this.form.headDict.length === 0) {
-                    this.form.headDict.push({name: "", value: ""})
-                }
-            },
-            addParameter() {
-                let headers = {name: "", value: "", _type:"String", required:true, restrict: "", description: ""};
-                this.form.requestList.push(headers)
-            },
-            delParameter(index) {
-                this.form.requestList.splice(index, 1);
-                if (this.form.requestList.length === 0) {
-                    this.form.requestList.push({name: "", value: "", _type:"String", required:true, restrict: "", description: ""})
-                }
-            },
-            addResponse() {
-                let headers = {name: "", value: "", _type:"String", required:true, description: ""};
-                this.form.responseList.push(headers)
-            },
-            delResponse(index) {
-                this.form.responseList.splice(index, 1);
-                if (this.form.responseList.length === 0) {
-                    this.form.responseList.push({name: "", value: "", _type:"String", required:true, description: ""})
-                }
-            },
-            changeParameterType() {
-                if (this.radio === 'form-data') {
-                    this.ParameterTyep = true
-                } else {
-                    this.ParameterTyep = false
-                }
-            },
-            showData() {
-                this.result = true
-            },
-            showHead(){
-                this.result = false
-            },
-            handleChange(val) {
-            },
-            onSubmit() {
-                console.log('submit!');
-            },
-            fastAdd() {
-                let form = this.$route.params.formData;
-                let _type = this.$route.params._type;
-                let _typeData = this.$route.params._typeData;
-                if (form) {
-                    this.form.requestList = [];
-                    this.form.requestType = form.request4.toUpperCase();
-                    this.form.httpType = form.Http4;
-                    this.form.apiAddress = form.addr;
-                    this.form.headDict = form.head;
-                    this.form.parameterRaw = form.parameterRaw;
-                    form.parameter.forEach((item) => {
-                        item['_type'] = 'String';
-                        item['required'] = true;
-                        item['restrict'] = '';
-                        item['description'] = '';
-                        this.form.requestList.push(item)
-                    });
-                    // this.form.parameter = form.parameter;
-                    this.form.mockCode = form.statusCode;
-                    this.form.data = JSON.stringify(form.resultData)
-                }
-                if (_type) {
-                    this.radio = _type
-                }
-                if (_typeData) {
-                    this.radioType = _typeData
-                }
-            }
-        },
-        watch: {
-            radio() {
-                this.changeParameterType()
-            },
-        },
-        mounted() {
-            this.getApiGroup();
-            this.fastAdd();
-        }
+export default {
+  data () {
+    return {
+      request: [{value: 'GET', label: 'GET'},
+        {value: 'POST', label: 'POST'},
+        {value: 'PUT', label: 'PUT'},
+        {value: 'DELETE', label: 'DELETE'}],
+      Http: [{value: 'HTTP', label: 'HTTP'},
+        {value: 'HTTPS', label: 'HTTPS'}],
+      paramTyep: [{value: 'Int', label: 'Int'},
+        {value: 'String', label: 'String'}],
+      checkHeadList: [],
+      checkParameterList: [],
+      ParameterTyep: true,
+      group: [],
+      radio: 'form-data',
+      secondGroup: [],
+      status: [{value: true, label: '启用'},
+        {value: false, label: '禁用'}],
+      header: [{value: 'Accept', label: 'Accept'},
+        {value: 'Accept-Charset', label: 'Accept-Charset'},
+        {value: 'Accept-Encoding', label: 'Accept-Encoding'},
+        {value: 'Accept-Language', label: 'Accept-Language'},
+        {value: 'Accept-Ranges', label: 'Accept-Ranges'},
+        {value: 'Authorization', label: 'Authorization'},
+        {value: 'Cache-Control', label: 'Cache-Control'},
+        {value: 'Connection', label: 'Connection'},
+        {value: 'Cookie', label: 'Cookie'},
+        {value: 'Content-Length', label: 'Content-Length'},
+        {value: 'Content-Type', label: 'Content-Type'},
+        {value: 'Content-MD5', label: 'Content-MD5'},
+        {value: 'Date', label: 'Date'},
+        {value: 'Expect', label: 'Expect'},
+        {value: 'From', label: 'From'},
+        {value: 'Host', label: 'Host'},
+        {value: 'If-Match', label: 'If-Match'},
+        {value: 'If-Modified-Since', label: 'If-Modified-Since'},
+        {value: 'If-None-Match', label: 'If-None-Match'},
+        {value: 'If-Range', label: 'If-Range'},
+        {value: 'If-Unmodified-Since', label: 'If-Unmodified-Since'},
+        {value: 'Max-Forwards', label: 'Max-Forwards'},
+        {value: 'Origin', label: 'Origin'},
+        {value: 'Pragma', label: 'Pragma'},
+        {value: 'Proxy-Authorization', label: 'Proxy-Authorization'},
+        {value: 'Range', label: 'Range'},
+        {value: 'Referer', label: 'Referer'},
+        {value: 'TE', label: 'TE'},
+        {value: 'Upgrade', label: 'Upgrade'},
+        {value: 'User-Agent', label: 'User-Agent'},
+        {value: 'Via', label: 'Via'},
+        {value: 'Warning', label: 'Warning'}],
+      header4: '',
+      addParameterFormVisible: false,
+      addResponseFormVisible: false,
+      required4: [{value: true, label: '是'},
+        {value: false, label: '否'}],
+      httpCode: [{value: '', label: ''},
+        {value: '200', label: '200'},
+        {value: '404', label: '404'},
+        {value: '400', label: '400'},
+        {value: '500', label: '500'},
+        {value: '502', label: '502'},
+        {value: '302', label: '302'}],
+      radioType: '',
+      result: true,
+      activeNames: ['1', '2', '3', '4'],
+      id: '',
+      parameterRaw: '',
+      request3: true,
+      form: {
+        apiGroupLevelFirst_id: '',
+        name: '',
+        status: true,
+        requestType: 'POST',
+        httpType: 'HTTP',
+        apiAddress: '',
+        headDict: [{name: '', value: ''},
+          {name: '', value: ''}],
+        requestList: [{name: '', value: '', _type: 'String', required: true, restrict: '', description: ''},
+          {name: '', value: '', _type: 'String', required: true, restrict: '', description: ''}],
+        requestParameterType: '',
+        responseList: [{name: '', value: '', _type: 'String', required: true, description: ''},
+          {name: '', value: '', _type: 'String', required: true, description: ''}],
+        mockCode: '',
+        data: ''
+      },
+      FormRules: {
+        name: [{ required: true, message: '请输入名称', trigger: 'blur' },
+          { max: 50, message: '不能超过50个字', trigger: 'blur' }],
+        apiAddress: [{ required: true, message: '请输入地址', trigger: 'blur' }],
+        required: [{ type: 'boolean', required: true, message: '请选择状态', trigger: 'blur' }],
+        apiGroupLevelFirst_id: [{ type: 'number', required: true, message: '请选择分组', trigger: 'blur'}]
+      },
+      editForm: {
+        name: '',
+        value: '',
+        required: '',
+        restrict: '',
+        description: ''
+      }
+      // editLoading: false
     }
+  },
+  methods: {
+    checkRequest () {
+      let request = this.form.requestType
+      if (request === 'GET' || request === 'DELETE') {
+        this.request3 = false
+      } else {
+        this.request3 = true
+      }
+    },
+    isJsonString (str) {
+      try {
+        if (typeof JSON.parse(str) === 'object') {
+          return true
+        }
+      } catch (e) {
+      }
+      return false
+    },
+    addApiInfo: function () {
+      if (this.form.data && this.form.mockCode) {
+        if (!this.isJsonString(this.form.data)) {
+          this.$message({
+            message: 'mock格式错误',
+            center: true,
+            type: 'error'
+          })
+        } else {
+          this.addApi()
+        }
+      } else if (this.form.data || this.form.mockCode) {
+        this.$message({
+          message: 'HTTP状态或mock为空',
+          center: true,
+          type: 'warning'
+        })
+      } else {
+        this.addApi()
+      }
+    },
+    addApi: function () {
+      this.$refs.form.validate((valid) => {
+        if (valid) {
+          let self = this
+          console.log(this.form.requestList)
+          this.$confirm('确认提交吗？', '提示', {}).then(() => {
+            self.form.parameterType = self.radio
+            let _type = self.form.parameterType
+            let _parameter = {}
+            if (_type === 'form-data') {
+              if (self.radioType === true) {
+                _type = 'raw'
+                self.form.requestList.forEach((item) => {
+                  if (item.name) {
+                    _parameter[item.name] = item.value
+                  }
+                })
+                _parameter = JSON.stringify(_parameter)
+              } else {
+                _parameter = self.form.requestList
+              }
+            } else {
+              _parameter = self.parameterRaw
+            }
+            console.log(_parameter)
+            let params = {
+              project_id: Number(self.$route.params.project_id),
+              apiGroupLevelFirst_id: Number(self.form.apiGroupLevelFirst_id),
+              name: self.form.name,
+              httpType: self.form.httpType,
+              requestType: self.form.requestType,
+              apiAddress: self.form.apiAddress,
+              status: self.form.status,
+              headDict: self.form.headDict,
+              requestParameterType: _type,
+              requestList: _parameter,
+              responseList: self.form.responseList,
+              mockCode: self.form.mockCode,
+              data: self.form.data,
+              description: ''
+            }
+            let headers = {
+              'Content-Type': 'application/json',
+              Authorization: 'Token ' + JSON.parse(sessionStorage.getItem('token'))
+
+            }
+            if (self.parameterRaw && _type === 'raw') {
+              if (!self.isJsonString(self.parameterRaw)) {
+                self.$message({
+                  message: '源数据格式错误',
+                  center: true,
+                  type: 'error'
+                })
+              } else {
+                addApiDetail(headers, params).then(_data => {
+                  let {msg, code, data} = _data
+                  if (code === '999999') {
+                    self.$router.push({name: '分组接口列表',
+                      params: {
+                        project_id: self.$route.params.project_id,
+                        firstGroup: self.form.apiGroupLevelFirst_id
+                      }
+                    })
+                    self.$message({
+                      message: '保存成功',
+                      center: true,
+                      type: 'success'
+                    })
+                  } else {
+                    self.$message.error({
+                      message: msg,
+                      center: true
+                    })
+                  }
+                })
+              }
+            } else {
+              addApiDetail(headers, params).then(_data => {
+                let {msg, code, data} = _data
+                if (code === '999999') {
+                  self.$router.push({name: '分组接口列表',
+                    params: {
+                      project_id: self.$route.params.project_id,
+                      firstGroup: self.form.apiGroupLevelFirst_id
+                    }
+                  })
+                  self.$message({
+                    message: '保存成功',
+                    center: true,
+                    type: 'success'
+                  })
+                } else {
+                  self.$message.error({
+                    message: msg,
+                    center: true
+                  })
+                }
+              })
+            }
+          })
+        }
+      })
+    },
+    editParameterSubmit: function () {
+      this.$refs.editForm.validate((valid) => {
+        if (valid) {
+          this.form.requestList[this.id] = this.editForm
+          this.addParameterFormVisible = false
+        }
+      })
+    },
+    handleParameterEdit: function (index, row) {
+      this.addParameterFormVisible = true
+      this.id = index
+      this.editForm = Object.assign({}, row)
+    },
+    editResponseSubmit: function () {
+      this.$refs.editForm.validate((valid) => {
+        if (valid) {
+          this.form.responseList[this.id] = this.editForm
+          this.addResponseFormVisible = false
+        }
+      })
+    },
+    handleResponseEdit: function (index, row) {
+      this.addResponseFormVisible = true
+      this.id = index
+      this.editForm = Object.assign({}, row)
+    },
+    // 获取api分组
+    getApiGroup () {
+      let self = this
+      let params = {
+        project_id: this.$route.params.project_id
+      }
+      let headers = {
+        'Content-Type': 'application/json',
+        Authorization: 'Token ' + JSON.parse(sessionStorage.getItem('token'))
+      }
+      getApiGroupList(headers, params).then(_data => {
+        let {msg, code, data} = _data
+        if (code === '999999') {
+          self.group = data
+          self.form.apiGroupLevelFirst_id = self.group[0].id
+        } else {
+          self.$message.error({
+            message: msg,
+            center: true
+          })
+        }
+      })
+    },
+    addHead () {
+      let headers = {name: '', value: ''}
+      this.form.headDict.push(headers)
+    },
+    delHead (index) {
+      this.form.headDict.splice(index, 1)
+      if (this.form.headDict.length === 0) {
+        this.form.headDict.push({name: '', value: ''})
+      }
+    },
+    addParameter () {
+      let headers = {name: '', value: '', _type: 'String', required: true, restrict: '', description: ''}
+      this.form.requestList.push(headers)
+    },
+    delParameter (index) {
+      this.form.requestList.splice(index, 1)
+      if (this.form.requestList.length === 0) {
+        this.form.requestList.push({name: '', value: '', _type: 'String', required: true, restrict: '', description: ''})
+      }
+    },
+    addResponse () {
+      let headers = {name: '', value: '', _type: 'String', required: true, description: ''}
+      this.form.responseList.push(headers)
+    },
+    delResponse (index) {
+      this.form.responseList.splice(index, 1)
+      if (this.form.responseList.length === 0) {
+        this.form.responseList.push({name: '', value: '', _type: 'String', required: true, description: ''})
+      }
+    },
+    changeParameterType () {
+      if (this.radio === 'form-data') {
+        this.ParameterTyep = true
+      } else {
+        this.ParameterTyep = false
+      }
+    },
+    showData () {
+      this.result = true
+    },
+    showHead () {
+      this.result = false
+    },
+    handleChange (val) {
+    },
+    onSubmit () {
+      console.log('submit!')
+    },
+    fastAdd () {
+      let form = this.$route.params.formData
+      let _type = this.$route.params._type
+      let _typeData = this.$route.params._typeData
+      if (form) {
+        this.form.requestList = []
+        this.form.requestType = form.request4.toUpperCase()
+        this.form.httpType = form.Http4
+        this.form.apiAddress = form.addr
+        this.form.headDict = form.head
+        this.form.parameterRaw = form.parameterRaw
+        form.parameter.forEach((item) => {
+          item['_type'] = 'String'
+          item['required'] = true
+          item['restrict'] = ''
+          item['description'] = ''
+          this.form.requestList.push(item)
+        })
+        // this.form.parameter = form.parameter;
+        this.form.mockCode = form.statusCode
+        this.form.data = JSON.stringify(form.resultData)
+      }
+      if (_type) {
+        this.radio = _type
+      }
+      if (_typeData) {
+        this.radioType = _typeData
+      }
+    }
+  },
+  watch: {
+    radio () {
+      this.changeParameterType()
+    }
+  },
+  mounted () {
+    this.getApiGroup()
+    this.fastAdd()
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -376,3 +376,11 @@
 2020-07-02 17:00:58,394 - request - INFO: body是b'{"username":"admin","password":"admin"}'
 2020-07-02 17:00:58,394 - request - INFO: 用户名是admin
 2020-07-02 17:00:58,394 - request - INFO: 密码是admin
+2020-07-06 15:27:34,439 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-06 15:27:34,440 - request - INFO: body是b'{"username":"admin","password":"admin123"}'
+2020-07-06 15:27:34,440 - request - INFO: 用户名是admin
+2020-07-06 15:27:34,440 - request - INFO: 密码是admin123
+2020-07-06 15:27:57,228 - request - INFO: param_dict是{'username': 'admin', 'password': 'admin123'}
+2020-07-06 15:27:57,230 - request - INFO: body是b'{"username":"admin","password":"admin123"}'
+2020-07-06 15:27:57,230 - request - INFO: 用户名是admin
+2020-07-06 15:27:57,231 - request - INFO: 密码是admin123
