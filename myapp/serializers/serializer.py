@@ -1,19 +1,13 @@
 from rest_framework import serializers
 import uuid
-from myapp.models import UserInfo
-from .models import Blog
+from myapp.models import UserInfo, Project
 
-class BlogSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Blog
-        fields = "__all__"
 
 class UserSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)  # 指定需要序列化的数据
-    account = serializers.CharField(required=True,  max_length=30)
-    password = serializers.CharField(required=True,  max_length=30)
+    account = serializers.CharField(required=True, max_length=30)
+    password = serializers.CharField(required=True, max_length=30)
     linenos = serializers.DateField(required=False)
-
 
     class Meta:
         model = UserInfo
@@ -21,7 +15,6 @@ class UserSerializer(serializers.ModelSerializer):
         # extra_kwargs = {
         #     'id': {'required': False}
         # }
-
 
     def create(self, validated_data):
         """新建"""
@@ -37,3 +30,10 @@ class UserSerializer(serializers.ModelSerializer):
     #     instance.y = validated_data.get('y', instance.y)
     #     instance.save()
     #     return instance
+
+
+class ProjectSerializer(serializers.Serializer):
+
+    class Meta:
+        model = Project
+        fields = '__all__'

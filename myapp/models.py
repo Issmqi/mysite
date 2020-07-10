@@ -52,28 +52,24 @@ class UserInfo(models.Model):
         verbose_name_plural = verbose_name
 
 #
-# class Project(models.Model):
-#     '''项目信息'''
-#     objects = models.Manager()
-#     project_id = models.AutoField(primary_key=True, verbose_name='项目id')
-#     project_name = models.CharField(max_length=50, verbose_name='项目名称')
-#     time = models.DateTimeField(auto_now=True, max_length=50, verbose_name='操作时间')
-#     type = models.CharField(max_length=50, verbose_name='操作类型')
-#     operationObject = models.CharField(max_length=50, verbose_name='操作对象')
-#     user = models.ForeignKey(UserInfo, related_name='username', blank=True, null=True,
-#                              on_delete=models.SET_NULL, verbose_name='操作人')
-#     description = models.CharField(max_length=1024, blank=True, null=True, verbose_name='描述')
-#
-#     def __unicode__(self):
-#         return self.project_id
-#
-#     def __str__(self):
-#         return self.project_id
-#
-#     class Meta:
-#         data_table = 'project'
-#         verbose_name = '项目'
-#         verbose_name_plural = verbose_name
+class Project(models.Model):
+    '''项目信息'''
+    objects = models.Manager()
+    project_id = models.AutoField(primary_key=True, verbose_name='项目id')
+    project_name = models.CharField(max_length=50, verbose_name='项目名称')
+    test_user = models.CharField(max_length=100, blank=True,verbose_name='测试人员')
+    description = models.CharField(max_length=1024, blank=True, null=True, verbose_name='项目描述')
+
+    def __unicode__(self):
+        return self.project_id
+
+    def __str__(self):
+        return self.project_id
+
+    class Meta:
+        data_table = 'project'
+        verbose_name = '项目'
+        verbose_name_plural = verbose_name
 #
 #
 # class ApiGroup(models.Model):

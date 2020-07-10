@@ -31,7 +31,7 @@
           <el-option label="delete" value="delete"></el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="数据传输方式">
+      <el-form-item label="请求参数类型">
         <el-select v-model="interfaceForm.datatype" placeholder="请选择数据传输方式">
           <el-option label="form-data" value="form-data"></el-option>
           <el-option label="json" value="json"></el-option>

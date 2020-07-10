@@ -17,7 +17,7 @@
             <template slot="title">
               <i class="el-icon-plus"></i>接口管理
             </template>
-            <el-menu-item index="addShop">接口列表</el-menu-item>
+            <el-menu-item index="interface">接口列表</el-menu-item>
             <el-menu-item index="interface_create">新增接口</el-menu-item>
           </el-submenu>
           <el-submenu index="4">

@@ -7,6 +7,7 @@ import login2 from '@/components/login2'
 import manage from '@/pages/manage'
 import home from '@/pages/home'
 import addInterface from '@/pages/addInterface'
+import interfaceList from '@/pages/interfaceList'
 
 Vue.use(Router)
 
@@ -46,6 +47,11 @@ export default new Router({
           path: '/management/interface_create',
           name: 'addInterface',
           component: addInterface
+        },
+        {
+          path: '/management/interface',
+          name: 'interfaceList',
+          component: interfaceList
         }
       ]
 
